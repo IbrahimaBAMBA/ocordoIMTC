@@ -1,0 +1,6 @@
+<IfModule mod_rewrite.c>
+    Addhandler application/x-httpd-php .xml
+    Options +FollowSymlinks
+    RewriteEngine On
+    RewriteRule ^([0-9]+).html$ index.php?page=$1 [L]
+</IfModule>
