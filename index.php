@@ -72,8 +72,16 @@ if (isset($_GET['page']) && is_numeric($_GET['page']) && $_GET['page'] <= $count
                     </div>
                 </div>
             </div>
-            <footer class="footerBar">
-                <p class="copyright">Copyright 1999-2018 by Refsnes Data. All Rights Reserved.</p>
+            <footer>
+                <div class="footerOcordo">
+                    <p class="copyright">Copyright 1999-2018 by Refsnes Data. All Rights Reserved.</p>
+                    <div class="row authorOcordo">
+                        <div class="col-lg-3 col-md-6 col-xs-12"><a href="https://chloelente.github.io/">Chloé</a></div>
+                        <div class="col-lg-3 col-md-6 col-xs-12"><a href="https://www.linkedin.com/in/ibrahima-bamba-304394132/">Ibrahima</a></div>
+                        <div class="col-lg-3 col-md-6 col-xs-12"><a href="https://maximedefretin.github.io/">Maxime</a></div>
+                        <div class="col-lg-3 col-md-6 col-xs-12"><a href="https://thomasszymanski.github.io/">Thomas</a></div>
+                    </div>
+                </div>
             </footer>
         </div>
         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
