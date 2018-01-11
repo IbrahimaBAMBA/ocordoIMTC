@@ -1,6 +1,10 @@
 <IfModule mod_rewrite.c>
+    #On donne un nom au fichier .xml
     Addhandler application/x-httpd-php .xml
+    #On utilise le module +FollowSymlinks, présent sur le serveur.
     Options +FollowSymlinks
+    #Active ou désactive le réécriture (on -> active la réécriture)
     RewriteEngine On
+    #Permet la réécriture des pages urls
     RewriteRule ^([0-9]+).html$ index.php?page=$1 [L]
 </IfModule>
