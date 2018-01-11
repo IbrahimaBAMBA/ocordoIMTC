@@ -22,7 +22,6 @@ if (isset($_GET['page']) && is_numeric($_GET['page']) && $_GET['page'] <= $count
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
         <link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet"> 
         <link rel="stylesheet" href="assets/css/style.css" />
-        <link rel="stylesheet" href="assets/css/style2.css" />
         <title>Projet IMTC</title>
     </head>
     <body>
@@ -56,12 +55,14 @@ if (isset($_GET['page']) && is_numeric($_GET['page']) && $_GET['page'] <= $count
                         $targetPage = $xml->getElementsByTagName('content')->item($page);
                         //nodeValue permet l'envoi du contenu dans la page
                         echo $targetPage->nodeValue;
-                        ?>
+                        if($page == 1){?>   
+                        <p class="linkYoutube"><a href="https://www.youtube.com/embed/Crh5lFpNK0o?feature=oembed">Lien YouTube</a></p>
+                        <?php } ?> 
                     </div>
                 </div>
             </div>
-        <footer>
-            <p>blabla</p>
+            <footer class="footerBar">
+            <p class="copyright">Copyright 1999-2018 by Refsnes Data. All Rights Reserved.</p>
         </footer>
         </div>
         <script src="assets/js/bootstrap.min.js"></script>
