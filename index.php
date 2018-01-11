@@ -26,13 +26,15 @@ if (isset($_GET['page']) && is_numeric($_GET['page']) && $_GET['page'] <= $count
     </head>
     <body>
         <div class="container">
+<!--      LOGO      -->
             <div class="row">
                 <div class="col-lg-12">
-                    <img class="logo center-block" src="assets/img/logo.png" alt="logo de l'entreprise Ocordo"/>
+                    <a href="index.php"><img class="logo center-block" src="assets/img/logo.png" alt="logo de l'entreprise Ocordo" /></a>
                 </div>
             </div>
-
+<!--      NAVBAR      -->
             <nav class="navbar navbar-inverse" role="navigation">
+<!--      nav burger      -->
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                         <span class="sr-only">Toggle navigation</span>
@@ -41,7 +43,7 @@ if (isset($_GET['page']) && is_numeric($_GET['page']) && $_GET['page'] <= $count
                         <span class="icon-bar"></span>
                     </button>
                 </div>
-                <!-- Collect the nav links, forms, and other content for toggling -->
+<!--      nav principale      -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         <a class="navLink" href="index.php"></a>
@@ -57,6 +59,7 @@ if (isset($_GET['page']) && is_numeric($_GET['page']) && $_GET['page'] <= $count
                     </ul>
                 </div>
             </nav>
+<!--      CONTENT      -->
             <div class="background">
                 <div class="row">
                     <div class="col-lg-12">
@@ -67,20 +70,21 @@ if (isset($_GET['page']) && is_numeric($_GET['page']) && $_GET['page'] <= $count
                         echo $targetPage->nodeValue;
                         if ($page == 1) {
                             ?>   
-                            <p class="linkYoutube"><a href="https://www.youtube.com/embed/Crh5lFpNK0o?feature=oembed">Lien YouTube</a></p>
+                            <p class="linkYoutube"><a href="https://www.youtube.com/embed/Crh5lFpNK0o?feature=oembed">Découvrer Ocordo en vidéo</a></p>
                         <?php } ?> 
                     </div>
                 </div>
             </div>
+<!--      FOOTER      -->
             <footer>
                 <div class="footerOcordo">
-                    <p class="copyright">Copyright 1999-2018 by Refsnes Data. All Rights Reserved.</p>
                     <div class="row authorOcordo">
                         <div class="col-lg-3 col-md-6 col-xs-12"><a href="https://chloelente.github.io/">Chloé</a></div>
                         <div class="col-lg-3 col-md-6 col-xs-12"><a href="https://www.linkedin.com/in/ibrahima-bamba-304394132/">Ibrahima</a></div>
                         <div class="col-lg-3 col-md-6 col-xs-12"><a href="https://maximedefretin.github.io/">Maxime</a></div>
                         <div class="col-lg-3 col-md-6 col-xs-12"><a href="https://thomasszymanski.github.io/">Thomas</a></div>
                     </div>
+                    <p class="copyright">Copyright 2018 by e2n.IMTC. All Rights Reserved.</p>
                 </div>
             </footer>
         </div>
