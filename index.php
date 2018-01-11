@@ -31,22 +31,32 @@ if (isset($_GET['page']) && is_numeric($_GET['page']) && $_GET['page'] <= $count
                     <img class="logo center-block" src="assets/img/logo.png" alt="logo de l'entreprise Ocordo"/>
                 </div>
             </div>
-            
-            <div class="menunavbar collapse navbar-collapse">
-                
-                <ul class="nav navbar-nav">
-                    <a class="navLink" href="index.php"></a>
-                    <!-- Grâce à getElementsByTagName on récupère les informations du fichier XML -->
-                    <?php
-                    foreach ($xml->getElementsByTagName('menu') as $link => $index) {
-                        ?>
-                        <!-- On génère l'index afin d'assigner un lien à chaque li de la navbar -->
-                        <li><a href="<?= $link + 1 ?>.html"><?= $index->nodeValue; ?></a></li>
+
+            <nav class="navbar navbar-inverse" role="navigation">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <a class="navLink" href="index.php"></a>
+                        <!-- Grâce à getElementsByTagName on récupère les informations du fichier XML -->
                         <?php
-                    }
-                    ?>
-                </ul>
-            </div>
+                        foreach ($xml->getElementsByTagName('menu') as $link => $index) {
+                            ?>
+                            <!-- On génère l'index afin d'assigner un lien à chaque li de la navbar -->
+                            <li><a href="<?= $link + 1 ?>.html"><?= $index->nodeValue; ?></a></li>
+                            <?php
+                        }
+                        ?>
+                    </ul>
+                </div>
+            </nav>
             <div class="background">
                 <div class="row">
                     <div class="col-lg-12">
@@ -55,16 +65,18 @@ if (isset($_GET['page']) && is_numeric($_GET['page']) && $_GET['page'] <= $count
                         $targetPage = $xml->getElementsByTagName('content')->item($page);
                         //nodeValue permet l'envoi du contenu dans la page
                         echo $targetPage->nodeValue;
-                        if($page == 1){?>   
-                        <p class="linkYoutube"><a href="https://www.youtube.com/embed/Crh5lFpNK0o?feature=oembed">Lien YouTube</a></p>
+                        if ($page == 1) {
+                            ?>   
+                            <p class="linkYoutube"><a href="https://www.youtube.com/embed/Crh5lFpNK0o?feature=oembed">Lien YouTube</a></p>
                         <?php } ?> 
                     </div>
                 </div>
             </div>
             <footer class="footerBar">
-            <p class="copyright">Copyright 1999-2018 by Refsnes Data. All Rights Reserved.</p>
-        </footer>
+                <p class="copyright">Copyright 1999-2018 by Refsnes Data. All Rights Reserved.</p>
+            </footer>
         </div>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
         <script src="assets/js/bootstrap.min.js"></script>
     </body>
 </html>
