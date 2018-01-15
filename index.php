@@ -14,6 +14,9 @@ if (isset($_GET['page']) && is_numeric($_GET['page']) && $_GET['page'] <= $count
     //La variable $page est égale à la valeur de 'page' - 1 => Par rapport aux valeurs d'un tableau qui débutent à 0
     $page = $_GET['page'] - 1;
 }
+if (isset($_GET['text'])){
+    echo $_GET['text'];
+}
 ?>
 <!DOCTYPE html>
 <html lang="fr">

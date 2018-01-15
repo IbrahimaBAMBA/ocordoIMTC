@@ -1,0 +1,4 @@
+AuthName "Page d'administration protégée, veuillez vous identifier"
+AuthType Basic
+AuthUserFile "/home/chloe/Documents/Website/OcordoIMTC/admin/.htpasswd"
+Require valid-user
